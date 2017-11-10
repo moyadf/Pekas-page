@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Architects+Daughter|Gloria+Hallelujah|Over+the+Rainbow");
+/*
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Architects Daughter', cursive;
+font-family: 'Over the Rainbow', cursive;
+*/
+/* line 17, ../../../scss/style.scss */
+body {
+  background: #F4F3EF;
+  font-family: "Architects Daughter", cursive;
+}
+
+/*
+  nav component
+*/
+/* line 27, ../../../scss/style.scss */
+#navigation-menu a {
+  color: #757575;
+}
+/* line 31, ../../../scss/style.scss */
+#navigation-menu .page-logo {
+  background-color: lightcoral;
+  border-radius: 50%;
+  padding: 10px;
+}
