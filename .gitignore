@@ -48,6 +48,7 @@ sublime-gulp.log
 
 # Ignore the build directory
 build/
+Content/
 
 # Ignore Map File
 *.map
