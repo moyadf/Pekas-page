@@ -9,12 +9,15 @@ font-family: 'Over the Rainbow', cursive;
 
 // var implicit
 $mainFont: 'Architects Daughter', cursive;
+$secondFont: 'Gloria Hallelujah', cursive;
+$thirdFont: 'Over the Rainbow', cursive;
 $colorPrimary: #F4F3EF;
 
 $color-background: #F5F5F5;
 $color-main: #F48FB1;
 $color-active: #FFF;
 $color-link: #FFF;
+$color-logo: #FBA1A1;
 
 $button-height: 27px;
 $button-width: 35px;
@@ -26,6 +29,44 @@ body {
   background: $colorPrimary;
   font-family: $mainFont;
 }
+
+/*
+  Generic clases
+*/
+.padding-50 {
+  padding-top: 50px;
+}
+
+.padding-40 {
+  padding-top: 40px;
+}
+/*
+  End Generic
+*/
+
+/*
+  Logo
+*/
+#logo-container {
+  .logo {
+    background-color: $color-logo;
+    padding: 10px;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .logo-title {
+    font-family: $thirdFont;
+    font-size: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #a593c2;
+    text-transform: capitalize;
+  }
+}
+
+
 
 /*
   nav component
@@ -43,7 +84,7 @@ body {
   }
 }
 
-.container {
+.container-custom {
   position: absolute;
   width: 100%;
   heigh: 100%;
@@ -184,6 +225,7 @@ h1 {
     font-family: $mainFont;
     font-weight: 400;
     text-align: center;
+    padding-top: 75px;
   }
   ul {
     list-style: none;

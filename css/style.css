@@ -4,28 +4,65 @@ font-family: 'Gloria Hallelujah', cursive;
 font-family: 'Architects Daughter', cursive;
 font-family: 'Over the Rainbow', cursive;
 */
-/* line 25, ../sass/style.scss */
+/* line 28, ../sass/style.scss */
 body {
   background: #F4F3EF;
   font-family: "Architects Daughter", cursive;
 }
 
 /*
+  Generic clases
+*/
+/* line 36, ../sass/style.scss */
+.padding-50 {
+  padding-top: 50px;
+}
+
+/* line 40, ../sass/style.scss */
+.padding-40 {
+  padding-top: 40px;
+}
+
+/*
+  End Generic
+*/
+/*
+  Logo
+*/
+/* line 51, ../sass/style.scss */
+#logo-container .logo {
+  background-color: #FBA1A1;
+  padding: 10px;
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+}
+/* line 59, ../sass/style.scss */
+#logo-container .logo-title {
+  font-family: "Over the Rainbow", cursive;
+  font-size: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #a593c2;
+  text-transform: capitalize;
+}
+
+/*
   nav component
 */
-/* line 35, ../sass/style.scss */
+/* line 76, ../sass/style.scss */
 #navigation-menu a {
   color: #757575;
 }
-/* line 39, ../sass/style.scss */
+/* line 80, ../sass/style.scss */
 #navigation-menu .page-logo {
   background-color: lightcoral;
   border-radius: 50%;
   padding: 10px;
 }
 
-/* line 46, ../sass/style.scss */
-.container {
+/* line 87, ../sass/style.scss */
+.container-custom {
   position: absolute;
   width: 100%;
   heigh: 100%;
@@ -35,12 +72,12 @@ body {
   margin: 0 auto;
   font-family: "Architects Daughter", cursive;
 }
-/* line 56, ../sass/style.scss */
-.container p {
+/* line 97, ../sass/style.scss */
+.container-custom p {
   font-size: 20px;
 }
-/* line 60, ../sass/style.scss */
-.container a {
+/* line 101, ../sass/style.scss */
+.container-custom a {
   display: inline-block;
   position: relative;
   text-align: center;
@@ -50,8 +87,8 @@ body {
   overflow: hidden;
   top: 5px;
 }
-/* line 70, ../sass/style.scss */
-.container a:after {
+/* line 111, ../sass/style.scss */
+.container-custom a:after {
   content: '';
   position: absolute;
   background: #F48FB1;
@@ -62,19 +99,19 @@ body {
   bottom: 0;
   transition: .35s ease;
 }
-/* line 81, ../sass/style.scss */
-.container a:hover:after, .container a:focus:after, .container a:active:after {
+/* line 122, ../sass/style.scss */
+.container-custom a:hover:after, .container-custom a:focus:after, .container-custom a:active:after {
   width: 100%;
 }
 
-/* line 89, ../sass/style.scss */
+/* line 130, ../sass/style.scss */
 h1 {
   position: relative;
   text-align: center;
   font-family: "Architects Daughter", cursive;
 }
 
-/* line 95, ../sass/style.scss */
+/* line 136, ../sass/style.scss */
 .button_container {
   position: fixed;
   top: 50px;
@@ -85,26 +122,26 @@ h1 {
   z-index: 100;
   transition: opacity .25s ease;
 }
-/* line 105, ../sass/style.scss */
+/* line 146, ../sass/style.scss */
 .button_container:hover {
   opacity: .7;
 }
-/* line 110, ../sass/style.scss */
+/* line 151, ../sass/style.scss */
 .button_container.active .top {
   transform: translateY(11px) translateX(0) rotate(45deg);
   background: #FFF;
 }
-/* line 114, ../sass/style.scss */
+/* line 155, ../sass/style.scss */
 .button_container.active .middle {
   opacity: 0;
   background: #FFF;
 }
-/* line 119, ../sass/style.scss */
+/* line 160, ../sass/style.scss */
 .button_container.active .bottom {
   transform: translateY(-11px) translateX(0) rotate(-45deg);
   background: #FFF;
 }
-/* line 125, ../sass/style.scss */
+/* line 166, ../sass/style.scss */
 .button_container span {
   background: #F48FB1;
   border: none;
@@ -116,16 +153,16 @@ h1 {
   transition: all .35s ease;
   cursor: pointer;
 }
-/* line 136, ../sass/style.scss */
+/* line 177, ../sass/style.scss */
 .button_container span:nth-of-type(2) {
   top: 11px;
 }
-/* line 140, ../sass/style.scss */
+/* line 181, ../sass/style.scss */
 .button_container span:nth-of-type(3) {
   top: 22px;
 }
 
-/* line 146, ../sass/style.scss */
+/* line 187, ../sass/style.scss */
 .overlay {
   position: fixed;
   background: #F48FB1;
@@ -138,30 +175,30 @@ h1 {
   transition: opacity .35s, visibility .35s, height .35s;
   overflow: hidden;
 }
-/* line 158, ../sass/style.scss */
+/* line 199, ../sass/style.scss */
 .overlay.open {
   opacity: .9;
   visibility: visible;
   height: 100%;
 }
-/* line 163, ../sass/style.scss */
+/* line 204, ../sass/style.scss */
 .overlay.open li {
   animation: fadeInRight .5s ease forwards;
   animation-delay: .35s;
 }
-/* line 167, ../sass/style.scss */
+/* line 208, ../sass/style.scss */
 .overlay.open li:nth-of-type(2) {
   animation-delay: .4s;
 }
-/* line 170, ../sass/style.scss */
+/* line 211, ../sass/style.scss */
 .overlay.open li:nth-of-type(3) {
   animation-delay: .45s;
 }
-/* line 173, ../sass/style.scss */
+/* line 214, ../sass/style.scss */
 .overlay.open li:nth-of-type(4) {
   animation-delay: .50s;
 }
-/* line 178, ../sass/style.scss */
+/* line 219, ../sass/style.scss */
 .overlay nav {
   position: relative;
   height: 70%;
@@ -171,8 +208,9 @@ h1 {
   font-family: "Architects Daughter", cursive;
   font-weight: 400;
   text-align: center;
+  padding-top: 75px;
 }
-/* line 188, ../sass/style.scss */
+/* line 230, ../sass/style.scss */
 .overlay ul {
   list-style: none;
   padding: 0;
@@ -181,7 +219,7 @@ h1 {
   position: relative;
   height: 100%;
 }
-/* line 196, ../sass/style.scss */
+/* line 238, ../sass/style.scss */
 .overlay ul li {
   display: block;
   height: 25%;
@@ -190,7 +228,7 @@ h1 {
   position: relative;
   opacity: 0;
 }
-/* line 204, ../sass/style.scss */
+/* line 246, ../sass/style.scss */
 .overlay ul li a {
   font-size: 1em;
   display: block;
@@ -199,11 +237,11 @@ h1 {
   text-decoration: none;
   overflow: hidden;
 }
-/* line 212, ../sass/style.scss */
+/* line 254, ../sass/style.scss */
 .overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
   width: 100%;
 }
-/* line 218, ../sass/style.scss */
+/* line 260, ../sass/style.scss */
 .overlay ul li a:after {
   content: '';
   position: absolute;
